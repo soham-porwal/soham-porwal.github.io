@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Testing an AI search improvement—and rolling it back — Soham Porwal</title>
+<meta name="description" content="A paired evaluation found lower recall despite better source diversity. I used the result to stop the change.">
+<meta name="author" content="Soham Porwal">
+<link rel="canonical" href="https://soham-porwal.github.io/v2/retrieval.html">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soham Porwal">
+<meta property="og:title" content="Testing an AI search improvement—and rolling it back — Soham Porwal">
+<meta property="og:description" content="A paired evaluation found lower recall despite better source diversity. I used the result to stop the change.">
+<meta property="og:url" content="https://soham-porwal.github.io/v2/retrieval.html">
+<meta property="og:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<meta property="og:image:alt" content="Portfolio of Soham Porwal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Testing an AI search improvement—and rolling it back — Soham Porwal">
+<meta name="twitter:description" content="A paired evaluation found lower recall despite better source diversity. I used the result to stop the change.">
+<meta name="twitter:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/v2/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">SP</span>Soham Porwal</a>
+<nav class="site-nav" aria-label="Main">
+<a href="index.html#work" aria-current="page">Work</a>
+<a href="index.html#experience" class="hide-sm">Experience</a>
+<a href="experiments.html">Experiments</a>
+<a href="index.html#about" class="hide-sm">About</a>
+<a href="resume-ai-workflows.pdf">Résumé ↗</a>
+<a href="mailto:soham.porwal@gmail.com" class="nav-cta">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="main" class="narrow">
+<div class="case-head">
+<a class="back" href="index.html#work">← Selected work</a>
+<div class="case-meta"><strong>Retrieval evaluation</strong><span>Independent</span><span>Aug 2026</span><span>Evaluation</span></div>
+<h1>Testing an AI search improvement—and rolling it back</h1>
+<p class="case-intro">A more diverse set of search results sounded better. A paired evaluation showed that it displaced relevant notes. I retained the simpler baseline.</p>
+</div>
+<div class="metric-card"><strong>0.4764 → 0.3731</strong>
+<span>Recall among the first six results fell under the diversity change, so the change was reverted.</span></div>
+
+<figure class="chart"><figcaption>Recall among the first six results · higher is better</figcaption><div class="bar-row"><span>Plain search</span><div class="bar" style="--width:95.28%"></div><strong>0.4764</strong></div><div class="bar-row"><span>Diversity change</span><div class="bar treatment" style="--width:74.62%"></div><strong>0.3731</strong></div><small>August 2026 · 40 scored queries within a 60-query evaluation set. Bars share a 0–0.5 scale.</small></figure>
+<div class="detail">
+<div><h2>Problem</h2><p>A personal knowledge corpus contained many more notes from some sources than others. Those sources could dominate retrieval even when a broader result set seemed desirable.</p></div>
+<div><h2>Decision</h2><p>Test source caps and diversity selection against plain vector search, with acceptance criteria fixed before the comparison. Better source balance alone would not justify worse retrieval.</p></div>
+<div><h2>Implementation &amp; ownership</h2><p>I developed the retrieval and evaluation workflow and owned the test decisions and interpretation. The harness records the query set, configurations and index fingerprints so the two arms can be compared.</p></div>
+<div><h2>Outcome</h2><p>Source diversity improved, but recall declined. The change failed the acceptance rule and was reverted. The result is specific to this corpus and query set; a promising setting found in a later sweep remains a hypothesis for fresh evaluation.</p></div>
+</div>
+<p class="method-note">Method note: the reference sets were oracle-derived, not fully human-labeled. This comparison supports a decision on this corpus; it does not establish a universal ranking of retrieval methods.</p>
+<section class="inspect" aria-labelledby="inspect-title">
+<h2 id="inspect-title">Recompute the recorded result</h2>
+<p>The download includes anonymous paired recall scores and a standard-library scorer. It reproduces the means shown above without exposing queries or corpus content. It recomputes the summary, not the original retrieval run or the reference judgments.</p>
+<pre><code>python retrieval_eval/scorer.py
+python retrieval_eval/scorer.py --synthetic</code></pre>
+<p>The synthetic example is separate and demonstrates the metric calculation; it is not evidence for the historical result.</p>
+<p><a class="read" href="work-samples.zip">Download scores, scorer and tests ↗</a></p></section>
+
+<div class="chips"><span class="chip">Retrieval</span><span class="chip">Evaluation</span><span class="chip">Python</span><span class="chip repo">Repository being prepared for publication</span></div>
+<div class="actions">
+<a class="button" href="resume-ai-workflows.pdf">View résumé ↗</a>
+<a class="button ghost" href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</div>
+<nav class="case-nav" aria-label="Case studies"><a href="appmosis.html">← Brokerage data for grounded AI answers</a><a href="payments.html">A different route through payment economics →</a></nav>
+</main>
+<footer class="site-foot">
+<div class="wrap">
+<span>© Soham Porwal · Updated September 2026</span>
+<span class="foot-links">
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal" rel="me noopener">LinkedIn ↗</a>
+<a href="https://github.com/soham-porwal" rel="me noopener">GitHub ↗</a>
+</span>
+</div>
+</footer>
+</body>
+</html>

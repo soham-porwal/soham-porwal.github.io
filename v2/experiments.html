@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Systems I’m exploring — Soham Porwal</title>
+<meta name="description" content="Experiments in running generative systems and evaluating how I build with coding agents.">
+<meta name="author" content="Soham Porwal">
+<link rel="canonical" href="https://soham-porwal.github.io/v2/experiments.html">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soham Porwal">
+<meta property="og:title" content="Systems I’m exploring — Soham Porwal">
+<meta property="og:description" content="Experiments in running generative systems and evaluating how I build with coding agents.">
+<meta property="og:url" content="https://soham-porwal.github.io/v2/experiments.html">
+<meta property="og:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<meta property="og:image:alt" content="Portfolio of Soham Porwal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Systems I’m exploring — Soham Porwal">
+<meta name="twitter:description" content="Experiments in running generative systems and evaluating how I build with coding agents.">
+<meta name="twitter:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/v2/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">SP</span>Soham Porwal</a>
+<nav class="site-nav" aria-label="Main">
+<a href="index.html#work">Work</a>
+<a href="index.html#experience" class="hide-sm">Experience</a>
+<a href="experiments.html" aria-current="page">Experiments</a>
+<a href="index.html#about" class="hide-sm">About</a>
+<a href="resume-ai-workflows.pdf">Résumé ↗</a>
+<a href="mailto:soham.porwal@gmail.com" class="nav-cta">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="main" class="narrow">
+<div class="case-head">
+<a class="back" href="index.html#work">← Selected work</a>
+<p class="eyebrow">Independent systems</p>
+<h1>Systems I’m exploring</h1>
+<p class="case-intro">Experiments in running generative systems and evaluating how I build with coding agents.</p>
+</div>
+<article class="experiment" id="infinite-tv">
+<p class="label">InfiniteTV · Recorded run: September 4, 2026</p>
+<h2>Keeping video generation moving while clips export</h2>
+<p>InfiniteTV explores a continuous channel of locally generated clips. To keep playback supplied, rendering, video encoding and publication must collectively keep up with playback time. I developed this local generation system and directed its architecture and verification work.</p>
+<div class="flow" role="group" aria-label="Simplified export architecture"><span>GPU rendering</span><b aria-hidden="true">→</b><span>Bounded export queue</span><b aria-hidden="true">→</b><span>Encode &amp; validate</span><b aria-hidden="true">→</b><span>Atomic publication</span></div>
+<p class="method-note">Simplified architecture diagram.</p>
+<h3>The decision</h3><p>Move MP4 writing off the render thread into a bounded asynchronous queue. Write to a partial file, check the output, and publish atomically so incomplete clips do not appear ready.</p>
+<div class="metrics"><div><strong>50 / 50</strong><span>clips published</span></div><div><strong>0</strong><span>export failures</span></div><div><strong>0.95×</strong><span>end-to-end realtime</span></div></div>
+<p>The run produced 204.2 seconds of airtime over 215.0 seconds including overhead. Render-only throughput was 1.115× realtime. Separating these measurements matters: faster rendering did not yet make the full run sustainably faster than playback.</p>
+<h3>What remains</h3><p>This is an independent prototype. The run verifies pipeline behavior, not consistent creative quality or an unattended production service.</p>
+<div class="chips"><span class="chip repo">Repository being prepared for publication</span></div>
+</article>
+<article class="experiment" id="harness">
+<p class="label">Coding workflow experiment · September 8, 2026</p>
+<h2>How much context does a coding task need?</h2>
+<p>I compared a direct workflow with a narrower task packet on one matched task, using the same nine acceptance checks fixed before the runs.</p>
+
+<h3>Reading the result</h3><p>Both outputs met the same acceptance checks. The token totals include auxiliary calls in both arms.</p>
+<div class="table-scroll"><table><caption>Recorded model usage, including auxiliary calls</caption><thead><tr><th scope="col">Workflow</th><th scope="col">Model tokens</th><th scope="col">Checks passed</th></tr></thead><tbody><tr><th scope="row">Direct</th><td>14,511</td><td>9 / 9</td></tr><tr><th scope="row">Narrow task packet</th><td>3,390</td><td>9 / 9</td></tr></tbody></table></div>
+<h3>What remains</h3><p>The sample is one pair, and the comparison excludes the cost of developing the harness. It is a reason to run more trials, not a claim of general productivity improvement or total cost savings.</p>
+<div class="chips"><span class="chip repo">Repository being prepared for publication</span></div>
+</article>
+<div class="actions">
+<a class="button" href="resume-ai-workflows.pdf">View résumé ↗</a>
+<a class="button ghost" href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</div>
+<nav class="case-nav" aria-label="Sections"><a href="index.html#work">← Selected work</a><a href="index.html#about">About my work →</a></nav>
+</main>
+<footer class="site-foot">
+<div class="wrap">
+<span>© Soham Porwal · Updated September 2026</span>
+<span class="foot-links">
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal" rel="me noopener">LinkedIn ↗</a>
+<a href="https://github.com/soham-porwal" rel="me noopener">GitHub ↗</a>
+</span>
+</div>
+</footer>
+</body>
+</html>

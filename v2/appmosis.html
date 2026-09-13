@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brokerage data for grounded AI answers — Soham Porwal</title>
+<meta name="description" content="Owned the launch of a portfolio AI feature: defined its data flow and prompt architecture, and coordinated engineering delivery from specification to release.">
+<meta name="author" content="Soham Porwal">
+<link rel="canonical" href="https://soham-porwal.github.io/v2/appmosis.html">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soham Porwal">
+<meta property="og:title" content="Brokerage data for grounded AI answers — Soham Porwal">
+<meta property="og:description" content="Owned the launch of a portfolio AI feature: defined its data flow and prompt architecture, and coordinated engineering delivery from specification to release.">
+<meta property="og:url" content="https://soham-porwal.github.io/v2/appmosis.html">
+<meta property="og:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<meta property="og:image:alt" content="Portfolio of Soham Porwal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brokerage data for grounded AI answers — Soham Porwal">
+<meta name="twitter:description" content="Owned the launch of a portfolio AI feature: defined its data flow and prompt architecture, and coordinated engineering delivery from specification to release.">
+<meta name="twitter:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/v2/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">SP</span>Soham Porwal</a>
+<nav class="site-nav" aria-label="Main">
+<a href="index.html#work" aria-current="page">Work</a>
+<a href="index.html#experience" class="hide-sm">Experience</a>
+<a href="experiments.html">Experiments</a>
+<a href="index.html#about" class="hide-sm">About</a>
+<a href="resume-ai-workflows.pdf">Résumé ↗</a>
+<a href="mailto:soham.porwal@gmail.com" class="nav-cta">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="main" class="narrow">
+<div class="case-head">
+<a class="back" href="index.html#work">← Selected work</a>
+<div class="case-meta"><strong>Appmosis</strong><span>Product Data Analyst</span><span>Mar 2025–present</span><span>Product &amp; integration</span></div>
+<h1>Brokerage data for grounded AI answers</h1>
+<p class="case-intro">At Appmosis, I owned the launch of a feature that answers questions using a user’s actual portfolio holdings. Appmosis is a San Francisco fintech startup with 15–30 people and fewer than 1,000 users at the time described.</p>
+</div>
+<div class="metric-card"><strong>6–8 weeks</strong>
+<span>From specification to general availability, in partnership with engineering.</span></div>
+<div class="flow" role="group" aria-label="Data flow"><span>Brokerage APIs</span><b aria-hidden="true">→</b><span>Common data model</span><b aria-hidden="true">→</b><span>Relevant holdings</span><b aria-hidden="true">→</b><span>Grounded answer</span></div>
+<div class="detail">
+<div><h2>Problem</h2><p>Brokerage APIs describe positions differently. Inconsistent inputs could corrupt portfolio reporting and give an AI feature unreliable context.</p></div>
+<div><h2>Decision</h2><p>Normalize each broker’s JSON into a common schema and upsert positions in GCP Spanner by account and symbol. At question time, query only the relevant holdings and format a compact context block. The answer uses portfolio state as of the last sync.</p></div>
+<div><h2>Implementation &amp; ownership</h2><p>I owned the launch from specification to release: defined context-window injection logic and prompt architecture, and coordinated engineering delivery. I built Python transformations for 5+ brokerage APIs, used SQL for launch measurement, and built dashboard validation checks.</p></div>
+<div><h2>Outcome</h2><p>The feature reached general availability. My validation investigation traced incorrect portfolio totals to null prices on halted stocks and resolved the issue before release. I also measured initial key connections after launch; the historical active-user cohort count is not available for this case study.</p></div>
+</div>
+<section class="inspect" aria-labelledby="inspect-title">
+<h2 id="inspect-title">Inspect the normalization example</h2>
+<p>This independent example uses invented broker payloads. It demonstrates the transformer pattern and preserves a missing price as unknown; it contains no employer code or data.</p>
+<pre><code>python brokerage_normalization/normalize.py
+python -m unittest discover -s tests -v</code></pre>
+<p>The output distinguishes known market value from completeness. A halted position remains incomplete instead of silently receiving a zero price.</p>
+<p><a class="read" href="work-samples.zip">Download Python examples and tests ↗</a></p></section>
+
+<div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">API integration</span><span class="chip repo">Repository being prepared for publication</span></div>
+<div class="actions">
+<a class="button" href="resume-ai-workflows.pdf">View résumé ↗</a>
+<a class="button ghost" href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</div>
+<nav class="case-nav" aria-label="Case studies"><span class="disabled">← Start of selected work</span><a href="retrieval.html">Testing an AI search improvement—and rolling it back →</a></nav>
+</main>
+<footer class="site-foot">
+<div class="wrap">
+<span>© Soham Porwal · Updated September 2026</span>
+<span class="foot-links">
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal" rel="me noopener">LinkedIn ↗</a>
+<a href="https://github.com/soham-porwal" rel="me noopener">GitHub ↗</a>
+</span>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job-discovery pipeline — Soham Porwal</title>
+<meta name="description" content="APIs, normalization, deduplication and local-model ranking turn scattered postings into a queue for human review.">
+<meta name="author" content="Soham Porwal">
+<link rel="canonical" href="https://soham-porwal.github.io/v2/workflow.html">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soham Porwal">
+<meta property="og:title" content="Job-discovery pipeline — Soham Porwal">
+<meta property="og:description" content="APIs, normalization, deduplication and local-model ranking turn scattered postings into a queue for human review.">
+<meta property="og:url" content="https://soham-porwal.github.io/v2/workflow.html">
+<meta property="og:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<meta property="og:image:alt" content="Portfolio of Soham Porwal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Job-discovery pipeline — Soham Porwal">
+<meta name="twitter:description" content="APIs, normalization, deduplication and local-model ranking turn scattered postings into a queue for human review.">
+<meta name="twitter:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/v2/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">SP</span>Soham Porwal</a>
+<nav class="site-nav" aria-label="Main">
+<a href="index.html#work" aria-current="page">Work</a>
+<a href="index.html#experience" class="hide-sm">Experience</a>
+<a href="experiments.html">Experiments</a>
+<a href="index.html#about" class="hide-sm">About</a>
+<a href="resume-ai-workflows.pdf">Résumé ↗</a>
+<a href="mailto:soham.porwal@gmail.com" class="nav-cta">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="main" class="narrow">
+<div class="case-head">
+<a class="back" href="index.html#work">← Selected work</a>
+<div class="case-meta"><strong>Workflow automation</strong><span>Independent</span><span>Sep 2026</span><span>Pipeline engineering</span></div>
+<h1>Job-discovery pipeline</h1>
+<p class="case-intro">I built a job-discovery workflow that brings API data into a common schema, removes duplicates and ranks relevant opportunities with local embeddings.</p>
+</div>
+<div class="metric-card"><strong>Working tool</strong>
+<span>Produces a ranked digest for review, with a human step before anything is sent.</span></div>
+<div class="flow" role="group" aria-label="Workflow stages"><span>Fetch</span><b aria-hidden="true">→</b><span>Normalize</span><b aria-hidden="true">→</b><span>Deduplicate</span><b aria-hidden="true">→</b><span>Rank</span><b aria-hidden="true">→</b><span>Human review</span></div>
+<div class="detail">
+<div><h2>Problem</h2><p>Roles appear across different boards, with inconsistent fields, duplicates and changing availability. Discovery and application readiness are different problems.</p></div>
+<div><h2>Decision</h2><p>Keep normalization and state deterministic, use models for relevance, and keep unread application questions visible for human review.</p></div>
+<div><h2>Implementation &amp; ownership</h2><p>I designed and built the workflow using Python, SQLite, API integrations and local models. The pipeline preserves source data and stops dependent stages when required upstream work fails.</p></div>
+<div><h2>Outcome</h2><p>The system produces a ranked digest for review. It is a personal tool with a human review step. Application submission and hiring outcomes are outside this case study.</p></div>
+</div>
+<section class="inspect" aria-labelledby="inspect-title">
+<h2 id="inspect-title">Inspect the workflow boundary</h2>
+<p>The pipeline preserves source records, normalizes fields, deduplicates postings, ranks relevance and produces a digest for review. A failed required stage prevents dependent work from continuing.</p>
+<pre><code>Fetch → Normalize → Deduplicate → Rank → Review
+Required stage failure → Stop dependent stages</code></pre>
+<p>This schematic describes the implemented workflow. The private posting records and application answers are not published.</p>
+</section>
+
+<div class="chips"><span class="chip">Python</span><span class="chip">SQLite</span><span class="chip">Local models</span><span class="chip repo">Repository being prepared for publication</span></div>
+<div class="actions">
+<a class="button" href="resume-implementation.pdf">View résumé ↗</a>
+<a class="button ghost" href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</div>
+<nav class="case-nav" aria-label="Case studies"><a href="payments.html">← A different route through payment economics</a><a href="experiments.html">Independent experiments →</a></nav>
+</main>
+<footer class="site-foot">
+<div class="wrap">
+<span>© Soham Porwal · Updated September 2026</span>
+<span class="foot-links">
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal" rel="me noopener">LinkedIn ↗</a>
+<a href="https://github.com/soham-porwal" rel="me noopener">GitHub ↗</a>
+</span>
+</div>
+</footer>
+</body>
+</html>
