@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job-discovery pipeline — Soham Porwal</title>
+<meta name="description" content="API integrations, deterministic state and model-assisted ranking.">
+<meta name="theme-color" content="#14203b">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://soham-porwal.soap2000.chatgpt.site/workflow.html"><meta property="og:type" content="website"><meta property="og:title" content="Job-discovery pipeline — Soham Porwal"><meta property="og:description" content="API integrations, deterministic state and model-assisted ranking."><meta property="og:url" content="https://soham-porwal.soap2000.chatgpt.site/workflow.html"><meta property="og:image" content="https://soham-porwal.soap2000.chatgpt.site/social-card.png"><meta name="twitter:card" content="summary_large_image"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header>
+<a class="brand" href="index.html">Soham Porwal</a>
+<nav aria-label="Main navigation">
+<a href="index.html#work">Work</a>
+<a href="index.html#approach">About</a>
+<a href="resume-implementation.pdf">Résumé</a>
+<a href="mailto:soham.porwal@gmail.com">Contact ↗</a>
+</nav>
+</header>
+<main id="main">
+<a class="back" href="index.html#work">← Selected work</a>
+<article class="case case-page" id="workflow">
+<div class="case-meta">
+<strong>Workflow automation</strong>
+<span>Independent</span>
+<span>API-to-digest pipeline</span>
+<span>Working tool · Sep 2026</span>
+</div>
+<div>
+<h1>Job-discovery pipeline</h1>
+<p class="case-intro">I built a job-discovery workflow that brings API data into a common schema, removes duplicates and ranks relevant opportunities with local embeddings.</p>
+<div class="flow" role="group" aria-label="Workflow stages">
+<span>Fetch</span>
+<b aria-hidden="true">→</b>
+<span>Normalize</span>
+<b aria-hidden="true">→</b>
+<span>Deduplicate</span>
+<b aria-hidden="true">→</b>
+<span>Rank</span>
+<b aria-hidden="true">→</b>
+<span>Human review</span>
+</div>
+<div class="detail-grid">
+<div>
+<h2>Problem</h2>
+<p>Roles appear across different boards, with inconsistent fields, duplicates and changing availability. Discovery and application readiness are different problems.</p>
+</div>
+<div>
+<h2>Decision</h2>
+<p>Keep normalization and state deterministic, use models for relevance, and keep unread application questions visible for human review.</p>
+</div>
+<div>
+<h2>Implementation & ownership</h2>
+<p>I designed and built the workflow using Python, SQLite, API integrations and local models. The pipeline preserves source data and stops dependent stages when required upstream work fails.</p>
+</div>
+<div>
+<h2>Outcome</h2>
+<p>The system produces a ranked digest for review. It is a personal tool with a human review step. Application submission and hiring outcomes are outside this case study.</p>
+</div>
+</div>
+</div>
+</article>
+<section class="inspect">
+<h2>Inspect the workflow boundary</h2>
+<p>The pipeline preserves source records, normalizes fields, deduplicates postings, ranks relevance and produces a digest for review. A failed required stage prevents dependent work from continuing.</p>
+<pre>
+<code>Fetch → Normalize → Deduplicate → Rank → Review
+Required stage failure → Stop dependent stages</code>
+</pre>
+<p>This schematic describes the implemented workflow. The private posting records and application answers are not published.</p>
+</section>
+<p class="end-link">
+<a href="resume-implementation.pdf">View résumé ↗</a> · <a href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</p>
+</main>
+</div>
+<footer class="wrap">
+<span>Soham Porwal · Updated September 2026</span>
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal">LinkedIn ↗</a>
+</footer>
+</body>
+</html>

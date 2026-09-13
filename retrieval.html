@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Testing an AI search improvement—and rolling it back — Soham Porwal</title>
+<meta name="description" content="A paired evaluation found lower recall despite better source diversity. I used the result to stop the change.">
+<meta name="theme-color" content="#14203b">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://soham-porwal.soap2000.chatgpt.site/retrieval.html"><meta property="og:type" content="website"><meta property="og:title" content="Testing an AI search improvement—and rolling it back — Soham Porwal"><meta property="og:description" content="A paired evaluation found lower recall despite better source diversity. I used the result to stop the change."><meta property="og:url" content="https://soham-porwal.soap2000.chatgpt.site/retrieval.html"><meta property="og:image" content="https://soham-porwal.soap2000.chatgpt.site/social-card.png"><meta name="twitter:card" content="summary_large_image"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header>
+<a class="brand" href="index.html">Soham Porwal</a>
+<nav aria-label="Main navigation">
+<a href="index.html#work">Work</a>
+<a href="index.html#approach">About</a>
+<a href="resume-ai-workflows.pdf">Résumé</a>
+<a href="mailto:soham.porwal@gmail.com">Contact ↗</a>
+</nav>
+</header>
+<main id="main">
+<a class="back" href="index.html#work">← Selected work</a>
+<article class="case case-page" id="retrieval">
+<div class="case-meta">
+<strong>Retrieval evaluation</strong>
+<span>Independent</span>
+<span>brain-tools + eval-lab</span>
+<span>Evaluation · Aug 2026</span>
+</div>
+<div>
+<h1>The search “improvement” I rolled back.</h1>
+<p class="case-intro">A more diverse set of search results sounded better. A paired evaluation showed that it displaced relevant notes. I retained the simpler baseline.</p>
+<figure class="chart">
+<figcaption>Recall among the first six results · higher is better</figcaption>
+<div class="bar-row">
+<span>Plain search</span>
+<div class="bar" style="--width:95.28%">
+</div>
+<strong>0.4764</strong>
+</div>
+<div class="bar-row">
+<span>Diversity change</span>
+<div class="bar treatment" style="--width:74.62%">
+</div>
+<strong>0.3731</strong>
+</div>
+<small>August 2026 · 40 scored queries within a 60-query evaluation set. Bars share a 0–0.5 scale.</small>
+</figure>
+<div class="detail-grid">
+<div>
+<h2>Problem</h2>
+<p>A personal knowledge corpus contained many more notes from some sources than others. Those sources could dominate retrieval even when a broader result set seemed desirable.</p>
+</div>
+<div>
+<h2>Decision</h2>
+<p>Test source caps and diversity selection against plain vector search, with acceptance criteria fixed before the comparison. Better source balance alone would not justify worse retrieval.</p>
+</div>
+<div>
+<h2>Implementation & ownership</h2>
+<p>I developed the retrieval and evaluation workflow and owned the test decisions and interpretation. The harness records the query set, configurations and index fingerprints so the two arms can be compared.</p>
+</div>
+<div>
+<h2>Outcome</h2>
+<p>Source diversity improved, but recall declined. The change failed the acceptance rule and was reverted. The result is specific to this corpus and query set; a promising setting found in a later sweep remains a hypothesis for fresh evaluation.</p>
+</div>
+</div>
+</div>
+<p class="method-note">Method note: the reference sets were oracle-derived, not fully human-labeled. This comparison supports a decision on this corpus; it does not establish a universal ranking of retrieval methods.</p>
+</article>
+<section class="inspect">
+<h2>Recompute the recorded result</h2>
+<p>The download includes anonymous paired recall scores and a standard-library scorer. It reproduces the means shown above without exposing queries or corpus content. It recomputes the summary, not the original retrieval run or the reference judgments.</p>
+<pre>
+<code>python retrieval_eval/scorer.py
+python retrieval_eval/scorer.py --synthetic</code>
+</pre>
+<p>The synthetic example is separate and demonstrates the metric calculation; it is not evidence for the historical result.</p>
+<a href="work-samples.zip">Download scores, scorer and tests ↗</a>
+</section>
+<p class="end-link">
+<a href="resume-ai-workflows.pdf">View résumé ↗</a> · <a href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</p>
+</main>
+</div>
+<footer class="wrap">
+<span>Soham Porwal · Updated September 2026</span>
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal">LinkedIn ↗</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A different route through payment economics — Soham Porwal</title>
+<meta name="description" content="Compared per-transaction processing with a wallet-load model. Finance used the analysis to revise unit economics and merchant terms.">
+<meta name="theme-color" content="#14203b">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://soham-porwal.soap2000.chatgpt.site/payments.html"><meta property="og:type" content="website"><meta property="og:title" content="A different route through payment economics — Soham Porwal"><meta property="og:description" content="Compared per-transaction processing with a wallet-load model. Finance used the analysis to revise unit economics and merchant terms."><meta property="og:url" content="https://soham-porwal.soap2000.chatgpt.site/payments.html"><meta property="og:image" content="https://soham-porwal.soap2000.chatgpt.site/social-card.png"><meta name="twitter:card" content="summary_large_image"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header>
+<a class="brand" href="index.html">Soham Porwal</a>
+<nav aria-label="Main navigation">
+<a href="index.html#work">Work</a>
+<a href="index.html#approach">About</a>
+<a href="resume-implementation.pdf">Résumé</a>
+<a href="mailto:soham.porwal@gmail.com">Contact ↗</a>
+</nav>
+</header>
+<main id="main">
+<a class="back" href="index.html#work">← Selected work</a>
+<article class="case case-page" id="payments">
+<div class="case-meta">
+<strong>360 World</strong>
+<span>Associate PM, Payments</span>
+<span>Sep 2024–Mar 2025</span>
+<span>Business analysis</span>
+</div>
+<div>
+<h1>A different route through payment economics</h1>
+<p class="case-intro">At 360 World, a B2B wallet and settlement platform, I analyzed transaction-level data and made the business case for a wallet-load alternative. The platform processed less than $10M annually across 10+ merchants in the period described.</p>
+<div class="detail-grid">
+<div>
+<h2>Problem</h2>
+<p>A per-transaction Stripe routing model shaped processing costs and merchant economics. The question was whether a different routing structure could materially improve them.</p>
+</div>
+<div>
+<h2>Decision</h2>
+<p>Compare the existing flow with a wallet-load model and explain the commercial implications to Finance, rather than treating processing fees as a fixed input.</p>
+</div>
+<div>
+<h2>Implementation & ownership</h2>
+<p>I analyzed transaction-level data, modeled the alternative, and translated the result into a business case. The work connected product architecture with the unit economics used in merchant terms.</p>
+</div>
+<div>
+<h2>Outcome</h2>
+<p>Finance adopted the analysis as a basis for revised unit economics and merchant commercial terms. The roughly 50% estimate comes from the routing model; realized savings were not measured in this case study.</p>
+</div>
+</div>
+</div>
+</article>
+<section class="inspect">
+<h2>Inspect the decision model</h2>
+<p>The comparison changes how often a processing fee is incurred. This schematic explains the decision; it is not the original financial workbook.</p>
+<pre>
+<code>Current route: processing fees per transaction
+Alternative: processing fees per wallet load
+Compare total fees at the same transaction demand</code>
+</pre>
+<p>The original fee schedule and workbook are not part of this case. The estimate does not establish realized savings or resolve float, loss exposure, or regulatory requirements for the alternative.</p>
+</section>
+<p class="end-link">
+<a href="resume-implementation.pdf">View résumé ↗</a> · <a href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
+</p>
+</main>
+</div>
+<footer class="wrap">
+<span>Soham Porwal · Updated September 2026</span>
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal">LinkedIn ↗</a>
+</footer>
+</body>
+</html>

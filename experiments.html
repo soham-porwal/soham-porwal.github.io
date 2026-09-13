@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Independent systems & experiments — Soham Porwal</title>
+<meta name="description" content="Generative media pipelines and a bounded AI coding workflow experiment.">
+<meta name="theme-color" content="#14203b">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://soham-porwal.soap2000.chatgpt.site/experiments.html"><meta property="og:type" content="website"><meta property="og:title" content="Independent systems &amp; experiments — Soham Porwal"><meta property="og:description" content="Generative media pipelines and a bounded AI coding workflow experiment."><meta property="og:url" content="https://soham-porwal.soap2000.chatgpt.site/experiments.html"><meta property="og:image" content="https://soham-porwal.soap2000.chatgpt.site/social-card.png"><meta name="twitter:card" content="summary_large_image"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header>
+<a class="brand" href="index.html">Soham Porwal</a>
+<nav aria-label="Main navigation">
+<a href="index.html#work">Work</a>
+<a href="index.html#approach">About</a>
+<a href="resume-ai-workflows.pdf">Résumé</a>
+<a href="mailto:soham.porwal@gmail.com">Contact ↗</a>
+</nav>
+</header>
+<main id="main">
+<a class="back" href="index.html#work">← Selected work</a>
+<section class="experiment-heading">
+<p class="eyebrow">Independent systems</p>
+<h1>Systems I’m exploring.</h1>
+<p class="lead">Experiments in running generative systems and evaluating how I build with coding agents.</p>
+</section>
+<article class="experiment" id="infinite-tv">
+<p class="project-label">InfiniteTV · Recorded run: September 4, 2026</p>
+<h2>Keeping video generation moving while clips export.</h2>
+<p>InfiniteTV explores a continuous channel of locally generated clips. To keep playback supplied, rendering, video encoding and publication must collectively keep up with playback time. I developed this local generation system and directed its architecture and verification work.</p>
+<div class="flow" role="group" aria-label="Simplified export architecture">
+<span>GPU rendering</span>
+<b aria-hidden="true">→</b>
+<span>Bounded export queue</span>
+<b aria-hidden="true">→</b>
+<span>Encode & validate</span>
+<b aria-hidden="true">→</b>
+<span>Atomic publication</span>
+</div>
+<p class="method-note">Simplified architecture diagram.</p>
+<h3>The decision</h3>
+<p>Move MP4 writing off the render thread into a bounded asynchronous queue. Write to a partial file, check the output, and publish atomically so incomplete clips do not appear ready.</p>
+<h3>The recorded result</h3>
+<div class="experiment-metrics">
+<div>
+<strong>50 / 50</strong>
+<span>clips published</span>
+</div>
+<div>
+<strong>0</strong>
+<span>export failures</span>
+</div>
+<div>
+<strong>0.95×</strong>
+<span>end-to-end realtime</span>
+</div>
+</div>
+<p>The run produced 204.2 seconds of airtime over 215.0 seconds including overhead. Render-only throughput was 1.115× realtime. Separating these measurements matters: faster rendering did not yet make the full run sustainably faster than playback.</p>
+<h3>What remains</h3>
+<p>This is an independent prototype. The run verifies pipeline behavior, not consistent creative quality or an unattended production service.</p>
+</article>
+<article class="experiment" id="harness">
+<p class="project-label">Coding workflow experiment · September 8, 2026</p>
+<h2>How much context does a coding task need?</h2>
+<p>I compared a direct workflow with a narrower task packet on one matched task, using the same nine acceptance checks fixed before the runs.</p>
+<table>
+<caption>Recorded model usage, including auxiliary calls</caption>
+<thead>
+<tr>
+<th scope="col">Workflow</th>
+<th scope="col">Model tokens</th>
+<th scope="col">Checks passed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Direct</th>
+<td>14,511</td>
+<td>9 / 9</td>
+</tr>
+<tr>
+<th scope="row">Narrow task packet</th>
+<td>3,390</td>
+<td>9 / 9</td>
+</tr>
+</tbody>
+</table>
+<p>Both outputs met the same acceptance checks. The token totals include auxiliary calls in both arms.</p>
+<p>The sample is one pair, and the comparison excludes the cost of developing the harness. It is a reason to run more trials, not a claim of general productivity improvement or total cost savings.</p>
+</article>
+</main>
+</div>
+<footer class="wrap">
+<span>Soham Porwal · Updated September 2026</span>
+<a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal">LinkedIn ↗</a>
+</footer>
+</body>
+</html>
