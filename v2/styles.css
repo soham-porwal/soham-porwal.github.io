@@ -304,6 +304,18 @@ td{font-variant-numeric:tabular-nums}
   .case-meta{gap:.2rem 0;flex-direction:column}
 }
 
+/* Phones: the header is the only row that cannot wrap, so it sets the page
+   width. Trim it rather than letting it force a sideways scroll. */
+@media (max-width:520px){
+  .site-nav{gap:.75rem;font-size:.83rem}
+  .site-nav .hide-xs{display:none}
+  .site-nav .nav-cta{padding:.32rem .7rem}
+  .brand{font-size:.95rem;gap:.45rem}
+  .mark{width:22px;height:22px;flex:0 0 22px;font-size:.65rem}
+  .site-head .wrap{gap:.6rem}
+  .hero h1{font-size:clamp(1.9rem,8vw,2.4rem)}
+}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
