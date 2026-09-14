@@ -1,0 +1,76 @@
+{
+  "note": "Hand-written fixture for the frozen vendorx transformer. expected_rows was written by reading MAPPING-FREEZE.md and the frozen mapping, NOT generated from frozen_vendorx.py output. Decimals are compared as strings so trailing zeros stay visible.",
+  "synthetic_only": true,
+  "dialect": "vendorx",
+  "account": "VX-ACCOUNT-0001",
+  "context": {
+    "price_timestamps": {
+      "VX-EQ-0001": "2026-07-02T20:00:00Z"
+    }
+  },
+  "payload": {
+    "dialect_version": "vendorx.positions.v1",
+    "account_ref": "VX-ACCOUNT-0001",
+    "positions": [
+      {
+        "units_held": "125",
+        "unit_quote": "17.40",
+        "security_code": "VX-EQ-0001",
+        "quote_ccy": "USD"
+      },
+      {
+        "units_held": "-40.5",
+        "unit_quote": "212.075",
+        "security_code": "VX-EQ-0002",
+        "quote_ccy": "USD"
+      },
+      {
+        "units_held": "8",
+        "unit_quote": "64.10",
+        "security_code": "VX-EQ-0003",
+        "quote_ccy": "CAD"
+      }
+    ]
+  },
+  "expected_rows": [
+    {
+      "refs": [["native", "VX-EQ-0001"]],
+      "asset_type": null,
+      "currency": "USD",
+      "quantity": "125",
+      "price": "17.40",
+      "price_at": "2026-07-02T20:00:00Z",
+      "reported_value": null,
+      "cost_basis": null,
+      "units": "shares",
+      "lots": [],
+      "option_terms": null
+    },
+    {
+      "refs": [["native", "VX-EQ-0002"]],
+      "asset_type": null,
+      "currency": "USD",
+      "quantity": "-40.5",
+      "price": "212.075",
+      "price_at": null,
+      "reported_value": null,
+      "cost_basis": null,
+      "units": "shares",
+      "lots": [],
+      "option_terms": null
+    },
+    {
+      "refs": [["native", "VX-EQ-0003"]],
+      "asset_type": null,
+      "currency": "CAD",
+      "quantity": "8",
+      "price": "64.10",
+      "price_at": null,
+      "reported_value": null,
+      "cost_basis": null,
+      "units": "shares",
+      "lots": [],
+      "option_terms": null
+    }
+  ]
+}

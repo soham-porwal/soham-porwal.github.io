@@ -1,0 +1,16 @@
+{
+  "synthetic_only": true,
+  "source_schema": {
+    "units_held": "number",
+    "unit_quote": "number",
+    "security_code": "string",
+    "quote_ccy": "string"
+  },
+  "canonical_schema": {
+    "quantity": "number",
+    "price": "number",
+    "instrument_id": "string",
+    "currency": "string"
+  },
+  "note": "Documentation fixture only. CLI uses the fixed embedded schema and accepts no records or schema input."
+}

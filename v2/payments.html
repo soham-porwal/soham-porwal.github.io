@@ -3,26 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A different route through payment economics — Soham Porwal</title>
+
+<title>Evaluating a wallet-load payment model — Soham Porwal</title>
 <meta name="description" content="Compared per-transaction processing with a wallet-load model. Finance used the analysis to revise unit economics and merchant terms.">
 <meta name="author" content="Soham Porwal">
-<link rel="canonical" href="https://soham-porwal.github.io/v2/payments.html">
+<link rel="canonical" href="https://soham-porwal.github.io/payments.html">
 <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Soham Porwal">
-<meta property="og:title" content="A different route through payment economics — Soham Porwal">
+<meta property="og:title" content="Evaluating a wallet-load payment model — Soham Porwal">
 <meta property="og:description" content="Compared per-transaction processing with a wallet-load model. Finance used the analysis to revise unit economics and merchant terms.">
-<meta property="og:url" content="https://soham-porwal.github.io/v2/payments.html">
-<meta property="og:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<meta property="og:url" content="https://soham-porwal.github.io/payments.html">
+<meta property="og:image" content="https://soham-porwal.github.io/social-card.png">
 <meta property="og:image:alt" content="Portfolio of Soham Porwal">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="A different route through payment economics — Soham Porwal">
+<meta name="twitter:title" content="Evaluating a wallet-load payment model — Soham Porwal">
 <meta name="twitter:description" content="Compared per-transaction processing with a wallet-load model. Finance used the analysis to revise unit economics and merchant terms.">
-<meta name="twitter:image" content="https://soham-porwal.github.io/v2/social-card.png">
+<meta name="twitter:image" content="https://soham-porwal.github.io/social-card.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/v2/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -45,33 +46,33 @@
 <div class="case-head">
 <a class="back" href="index.html#work">← Selected work</a>
 <div class="case-meta"><strong>360 World</strong><span>Associate PM, Payments</span><span>Sep 2024–Mar 2025</span><span>Business analysis</span></div>
-<h1>A different route through payment economics</h1>
-<p class="case-intro">At 360 World, a B2B wallet and settlement platform, I analyzed transaction-level data and made the business case for a wallet-load alternative. The platform processed less than $10M annually across 10+ merchants in the period described.</p>
+<h1>Evaluating a wallet-load payment model</h1>
+<p class="case-intro">At 360 World, a B2B wallet and settlement platform, I analyzed transaction-level data to compare processing fees on individual transactions with fees on wallet loads. Finance used the analysis to revise unit economics and merchant terms.</p>
 </div>
 <div class="metric-card"><strong>Adopted by Finance</strong>
 <span>The analysis became the basis for revised unit economics and merchant commercial terms.</span></div>
 
 <div class="detail">
 <div><h2>Problem</h2><p>A per-transaction Stripe routing model shaped processing costs and merchant economics. The question was whether a different routing structure could materially improve them.</p></div>
-<div><h2>Decision</h2><p>Compare the existing flow with a wallet-load model and explain the commercial implications to Finance, rather than treating processing fees as a fixed input.</p></div>
-<div><h2>Implementation &amp; ownership</h2><p>I analyzed transaction-level data, modeled the alternative, and translated the result into a business case. The work connected product architecture with the unit economics used in merchant terms.</p></div>
-<div><h2>Outcome</h2><p>Finance adopted the analysis as a basis for revised unit economics and merchant commercial terms. The roughly 50% estimate comes from the routing model; realized savings were not measured in this case study.</p></div>
+<div><h2>Approach</h2><p>Compare the existing Stripe routing model with a wallet-load model at the same transaction demand. The alternative changes when a processing fee is incurred, so the analysis had to connect transaction behavior with the proposed commercial terms.</p></div>
+<div><h2>My contribution</h2><p>I analyzed transaction-level data, modeled the alternative and presented the business case to Finance. I translated the processing-cost comparison into unit economics that could inform merchant terms.</p></div>
+<div><h2>Outcome</h2><p>The model indicated roughly 50% lower processing costs, and Finance adopted the analysis for revised unit economics and merchant terms. This was a modeled opportunity; the case study does not establish realized savings.</p></div>
 </div>
 <section class="inspect" aria-labelledby="inspect-title">
-<h2 id="inspect-title">Inspect the decision model</h2>
+<h2 id="inspect-title">How the comparison works</h2>
 <p>The comparison changes how often a processing fee is incurred. This schematic explains the decision; it is not the original financial workbook.</p>
-<pre><code>Current route: processing fees per transaction
+<pre tabindex="0" aria-label="Example commands or workflow"><code>Current route: processing fees per transaction
 Alternative: processing fees per wallet load
 Compare total fees at the same transaction demand</code></pre>
-<p>The original fee schedule and workbook are not part of this case. The estimate does not establish realized savings or resolve float, loss exposure, or regulatory requirements for the alternative.</p>
+<p>The original fee schedule and workbook are not public. This comparison covers processing costs; float, loss exposure and regulatory requirements would need separate assessment.</p>
 </section>
 
-<div class="chips"><span class="chip">Product analysis</span><span class="chip">Unit economics</span><span class="chip">SQL</span><span class="chip repo">Repository being prepared for publication</span></div>
+<div class="chips"><span class="chip">Product analysis</span><span class="chip">Unit economics</span><span class="chip">SQL</span></div>
 <div class="actions">
 <a class="button" href="resume-implementation.pdf">View résumé ↗</a>
 <a class="button ghost" href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
 </div>
-<nav class="case-nav" aria-label="Case studies"><a href="retrieval.html">← Testing an AI search improvement—and rolling it back</a><a href="workflow.html">Job-discovery pipeline →</a></nav>
+<nav class="case-nav" aria-label="Case studies"><a href="retrieval.html">← Evaluating source diversity in AI search</a><a href="workflow.html">Automating job discovery and ranking →</a></nav>
 </main>
 <footer class="site-foot">
 <div class="wrap">

@@ -1,0 +1,18 @@
+{
+  "broker": "Northstar Demo",
+  "accounts": [
+    {
+      "account_id": "alpha-cash",
+      "total_value": "12500.00",
+      "positions": [
+        {"symbol": "ACME", "quantity": "10", "last_price": "25.50"},
+        {"symbol": "HALT", "quantity": "4", "last_price": null}
+      ]
+    },
+    {
+      "account_id": "alpha-unknown",
+      "total_value": null,
+      "positions": []
+    }
+  ]
+}

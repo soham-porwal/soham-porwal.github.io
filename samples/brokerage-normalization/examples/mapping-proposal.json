@@ -1,0 +1,36 @@
+{
+  "artifact_type": "dev_only_synthetic_mapping_proposal",
+  "status": "review_required",
+  "created_utc": "2026-09-13T20:03:45.389028+00:00",
+  "synthetic_only": true,
+  "model": "qwen3:14b",
+  "model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+  "input_sha256": "4e17f61f63a36328bee3ccccac4fafdf354294c62c967df4146c325e7c9bae74",
+  "request_sha256": "91fdbe7aa7cbe3732f0ea06d0deb153bfc4e02eb1a3a001ccb7ea6bb655a5f6c",
+  "response_sha256": "0222fd022b36f44d598a43b4631046135ba8553397e1f0d3d301e207a8c4e63e",
+  "source_schema": {
+    "units_held": "number",
+    "unit_quote": "number",
+    "security_code": "string",
+    "quote_ccy": "string"
+  },
+  "canonical_schema": {
+    "quantity": "number",
+    "price": "number",
+    "instrument_id": "string",
+    "currency": "string"
+  },
+  "mapping": {
+    "quote_ccy": "currency",
+    "security_code": "instrument_id",
+    "unit_quote": "price",
+    "units_held": "quantity"
+  },
+  "next_step": "Human reviews, then separately authors and tests a deterministic transformer and fixture. No runtime loading or automatic promotion.",
+  "generation": {
+    "done_reason": "stop",
+    "total_duration": 7952468100,
+    "prompt_eval_count": 111,
+    "eval_count": 45
+  }
+}

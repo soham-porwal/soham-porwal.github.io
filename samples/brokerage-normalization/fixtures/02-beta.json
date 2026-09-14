@@ -1,0 +1,7 @@
+{
+  "version": 1, "broker": "beta", "account": "demo-account", "snapshot_id": "beta-1",
+  "as_of": "2026-09-10T10:00:00Z",
+  "holdings": [
+    {"security": "demo-us-1", "ticker": "DUP", "venue": "XNYS", "ccy": "USD", "units": "1.25", "mark": "26"}
+  ]
+}

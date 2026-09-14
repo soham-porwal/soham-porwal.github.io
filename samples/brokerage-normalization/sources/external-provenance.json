@@ -1,0 +1,27 @@
+{
+  "evidence_class": "external_synthetic_fixture",
+  "native_capture_verified": false,
+  "broker": "Fidelity",
+  "author": "holdequity/planfi-import",
+  "commit": "591fbf7aadf2a3e30245868a8f034da8d154fd73",
+  "source_url": "https://raw.githubusercontent.com/holdequity/planfi-import/591fbf7aadf2a3e30245868a8f034da8d154fd73/fixtures/csv-sandbox.mjs",
+  "license_url": "https://raw.githubusercontent.com/holdequity/planfi-import/591fbf7aadf2a3e30245868a8f034da8d154fd73/LICENSE",
+  "retrieved_at": "2026-09-11T06:03:32.0087382Z",
+  "actual_sample_as_of": "2026-07-02",
+  "sample_as_of_type": "author_chosen_test_fixture_date_not_native_report_date",
+  "source_file": "fidelity-external-source.mjs.txt",
+  "source_sha256": "0e62e0dc6e146c065d87b78700712b66aa1137477f16eff09ee90012746d3d66",
+  "csv_file": "fidelity-external-2026-07-02.csv",
+  "csv_sha256": "efb7b6408e96c08f82f228fb769e6ff2f268c7855b441cd8e67fb0babadf4a89",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Kameron Kales",
+  "license_file": "fidelity-LICENSE.txt",
+  "license_sha256": "3479d363b000585232023abef1dc589a4f8785354402fd3feb4454b549f768f0",
+  "extraction": "Safely parsed only simple single-quoted string literals in const fidelityPositions array; rejected escapes or unexpected syntax. Joined with CRLF and prepended UTF-8 BOM as the source files[0].content specifies. Fetched JavaScript was never executed. Original dates, fields, row values, trailing empty row and disclaimer preserved.",
+  "literal_rows": 8,
+  "limitations": [
+    "External author test fixture; not official Fidelity schema or observed live response.",
+    "Type column is present despite conflicting source comment.",
+    "Fictitious account IDs retained unchanged from public test fixture."
+  ]
+}

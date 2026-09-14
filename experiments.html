@@ -3,100 +3,89 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Independent systems & experiments — Soham Porwal</title>
-<meta name="description" content="Generative media pipelines and a bounded AI coding workflow experiment.">
-<meta name="theme-color" content="#14203b">
+
+<title>AI systems experiments — Soham Porwal</title>
+<meta name="description" content="Independent experiments in video generation and coding workflows, developed with coding agents. Each result is tied to a specific recorded run.">
+<meta name="author" content="Soham Porwal">
+<link rel="canonical" href="https://soham-porwal.github.io/experiments.html">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soham Porwal">
+<meta property="og:title" content="AI systems experiments — Soham Porwal">
+<meta property="og:description" content="Independent experiments in video generation and coding workflows, developed with coding agents. Each result is tied to a specific recorded run.">
+<meta property="og:url" content="https://soham-porwal.github.io/experiments.html">
+<meta property="og:image" content="https://soham-porwal.github.io/social-card.png">
+<meta property="og:image:alt" content="Portfolio of Soham Porwal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI systems experiments — Soham Porwal">
+<meta name="twitter:description" content="Independent experiments in video generation and coding workflows, developed with coding agents. Each result is tied to a specific recorded run.">
+<meta name="twitter:image" content="https://soham-porwal.github.io/social-card.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://soham-porwal.soap2000.chatgpt.site/experiments.html"><meta property="og:type" content="website"><meta property="og:title" content="Independent systems &amp; experiments — Soham Porwal"><meta property="og:description" content="Generative media pipelines and a bounded AI coding workflow experiment."><meta property="og:url" content="https://soham-porwal.soap2000.chatgpt.site/experiments.html"><meta property="og:image" content="https://soham-porwal.soap2000.chatgpt.site/social-card.png"><meta name="twitter:card" content="summary_large_image"></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Soham Porwal", "url": "https://soham-porwal.github.io/", "email": "mailto:soham.porwal@gmail.com", "jobTitle": "Product Data Analyst", "address": {"@type": "PostalAddress", "addressLocality": "San Francisco"}, "sameAs": ["https://www.linkedin.com/in/soham-porwal", "https://github.com/soham-porwal"], "knowsAbout": ["Brokerage data integration", "AI feature delivery", "Retrieval evaluation", "Payments unit economics"]}</script>
+</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
 <div class="wrap">
-<header>
-<a class="brand" href="index.html">Soham Porwal</a>
-<nav aria-label="Main navigation">
+<a class="brand" href="index.html"><span class="mark" aria-hidden="true">SP</span>Soham Porwal</a>
+<nav class="site-nav" aria-label="Main">
 <a href="index.html#work">Work</a>
-<a href="index.html#approach">About</a>
-<a href="resume-ai-workflows.pdf">Résumé</a>
-<a href="mailto:soham.porwal@gmail.com">Contact ↗</a>
+<a href="index.html#experience" class="hide-sm">Experience</a>
+<a href="experiments.html" aria-current="page">Experiments</a>
+<a href="index.html#about" class="hide-sm">About</a>
+<a href="resume-ai-workflows.pdf" class="hide-xs">Résumé ↗</a>
+<a href="mailto:soham.porwal@gmail.com" class="nav-cta">Contact</a>
 </nav>
+</div>
 </header>
-<main id="main">
+
+<main id="main" class="narrow">
+<div class="case-head">
 <a class="back" href="index.html#work">← Selected work</a>
-<section class="experiment-heading">
 <p class="eyebrow">Independent systems</p>
-<h1>Systems I’m exploring.</h1>
-<p class="lead">Experiments in running generative systems and evaluating how I build with coding agents.</p>
-</section>
+<h1>AI systems experiments</h1>
+<p class="case-intro">Independent experiments in video generation and coding workflows, developed with coding agents. Each result is tied to a specific recorded run.</p>
+</div>
 <article class="experiment" id="infinite-tv">
-<p class="project-label">InfiniteTV · Recorded run: September 4, 2026</p>
-<h2>Keeping video generation moving while clips export.</h2>
-<p>InfiniteTV explores a continuous channel of locally generated clips. To keep playback supplied, rendering, video encoding and publication must collectively keep up with playback time. I developed this local generation system and directed its architecture and verification work.</p>
-<div class="flow" role="group" aria-label="Simplified export architecture">
-<span>GPU rendering</span>
-<b aria-hidden="true">→</b>
-<span>Bounded export queue</span>
-<b aria-hidden="true">→</b>
-<span>Encode & validate</span>
-<b aria-hidden="true">→</b>
-<span>Atomic publication</span>
-</div>
+<p class="label">InfiniteTV · Recorded run: September 4, 2026</p>
+<h2>Separating video rendering from export</h2>
+<p>InfiniteTV is a local video-generation prototype intended to supply a continuous channel of clips. I directed its architecture and AI-assisted implementation, including an export queue that lets rendering continue while earlier clips are encoded.</p>
+<div class="flow" role="group" aria-label="Simplified export architecture"><span>GPU rendering</span><b aria-hidden="true">→</b><span>Bounded export queue</span><b aria-hidden="true">→</b><span>Encode &amp; validate</span><b aria-hidden="true">→</b><span>Atomic publication</span></div>
 <p class="method-note">Simplified architecture diagram.</p>
-<h3>The decision</h3>
-<p>Move MP4 writing off the render thread into a bounded asynchronous queue. Write to a partial file, check the output, and publish atomically so incomplete clips do not appear ready.</p>
-<h3>The recorded result</h3>
-<div class="experiment-metrics">
-<div>
-<strong>50 / 50</strong>
-<span>clips published</span>
-</div>
-<div>
-<strong>0</strong>
-<span>export failures</span>
-</div>
-<div>
-<strong>0.95×</strong>
-<span>end-to-end realtime</span>
-</div>
-</div>
-<p>The run produced 204.2 seconds of airtime over 215.0 seconds including overhead. Render-only throughput was 1.115× realtime. Separating these measurements matters: faster rendering did not yet make the full run sustainably faster than playback.</p>
-<h3>What remains</h3>
-<p>This is an independent prototype. The run verifies pipeline behavior, not consistent creative quality or an unattended production service.</p>
+<h3>The decision</h3><p>Move MP4 writing off the render thread into a bounded asynchronous queue. Write to a partial file, check the output, and publish atomically so incomplete clips do not appear ready.</p>
+<div class="metrics"><div><strong>50 / 50</strong><span>clips published</span></div><div><strong>0</strong><span>export failures</span></div><div><strong>0.95×</strong><span>end-to-end realtime</span></div></div>
+<p>The run produced 204.2 seconds of video in 215.0 seconds including overhead. Rendering alone reached 1.115× playback speed, but the complete pipeline remained at 0.95×. It could not sustain continuous playback in this run.</p>
+<h3>Scope</h3><p>This run measures export reliability and throughput. It does not evaluate creative quality or establish readiness for unattended operation.</p>
+<div class="chips"></div>
 </article>
 <article class="experiment" id="harness">
-<p class="project-label">Coding workflow experiment · September 8, 2026</p>
-<h2>How much context does a coding task need?</h2>
-<p>I compared a direct workflow with a narrower task packet on one matched task, using the same nine acceptance checks fixed before the runs.</p>
-<table>
-<caption>Recorded model usage, including auxiliary calls</caption>
-<thead>
-<tr>
-<th scope="col">Workflow</th>
-<th scope="col">Model tokens</th>
-<th scope="col">Checks passed</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">Direct</th>
-<td>14,511</td>
-<td>9 / 9</td>
-</tr>
-<tr>
-<th scope="row">Narrow task packet</th>
-<td>3,390</td>
-<td>9 / 9</td>
-</tr>
-</tbody>
-</table>
-<p>Both outputs met the same acceptance checks. The token totals include auxiliary calls in both arms.</p>
-<p>The sample is one pair, and the comparison excludes the cost of developing the harness. It is a reason to run more trials, not a claim of general productivity improvement or total cost savings.</p>
+<p class="label">Coding workflow experiment · September 8, 2026</p>
+<h2>Comparing context size on a coding task</h2>
+<p>I compared a direct coding workflow with a narrower task brief on one matched task. I fixed the same nine acceptance checks before both runs and counted all reported model tokens, including auxiliary calls.</p>
+
+<h3>Result</h3><p>Both outputs passed the acceptance checks. The narrower brief used fewer model tokens on this task, supporting further trials with different tasks.</p>
+<div class="table-scroll"><table><caption>Recorded model usage, including auxiliary calls</caption><thead><tr><th scope="col">Workflow</th><th scope="col">Model tokens</th><th scope="col">Checks passed</th></tr></thead><tbody><tr><th scope="row">Direct</th><td>14,511</td><td>9 / 9</td></tr><tr><th scope="row">Narrow task brief</th><td>3,390</td><td>9 / 9</td></tr></tbody></table></div>
+<h3>Scope</h3><p>This is a single matched pair. The comparison excludes development and orchestration costs, so it does not establish overall savings or a general productivity improvement.</p>
+<div class="chips"></div>
 </article>
-</main>
+<div class="actions">
+<a class="button" href="resume-ai-workflows.pdf">View résumé ↗</a>
+<a class="button ghost" href="mailto:soham.porwal@gmail.com">Discuss this work ↗</a>
 </div>
-<footer class="wrap">
-<span>Soham Porwal · Updated September 2026</span>
+<nav class="case-nav" aria-label="Sections"><a href="index.html#work">← Selected work</a><a href="index.html#about">About →</a></nav>
+</main>
+<footer class="site-foot">
+<div class="wrap">
+<span>© Soham Porwal · Updated September 2026</span>
+<span class="foot-links">
 <a href="mailto:soham.porwal@gmail.com">soham.porwal@gmail.com ↗</a>
-<a href="https://www.linkedin.com/in/soham-porwal">LinkedIn ↗</a>
+<a href="https://www.linkedin.com/in/soham-porwal" rel="me noopener">LinkedIn ↗</a>
+<a href="https://github.com/soham-porwal" rel="me noopener">GitHub ↗</a>
+</span>
+</div>
 </footer>
 </body>
 </html>

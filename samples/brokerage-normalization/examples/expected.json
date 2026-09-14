@@ -1,0 +1,158 @@
+{
+  "accounts": [
+    {
+      "account": "demo-account",
+      "as_of": "2026-09-10T11:00:00Z",
+      "broker": "alpha",
+      "empty_snapshot": false,
+      "positions": [
+        {
+          "currency": "CAD",
+          "instrument_id": "demo-ca-1",
+          "market_value": "105",
+          "mic": "XTSE",
+          "price": "42",
+          "quantity": "2.5",
+          "symbol": "DUP"
+        },
+        {
+          "currency": "USD",
+          "instrument_id": "demo-halt",
+          "market_value": null,
+          "mic": "XNAS",
+          "price": null,
+          "quantity": "4",
+          "symbol": "HALT"
+        },
+        {
+          "currency": "USD",
+          "instrument_id": "demo-us-1",
+          "market_value": "216",
+          "mic": "XNYS",
+          "price": "27",
+          "quantity": "8",
+          "symbol": "DUP"
+        }
+      ],
+      "snapshot_id": "alpha-2",
+      "valuations": [
+        {
+          "complete": true,
+          "currency": "CAD",
+          "known_market_value": "105",
+          "missing_price_count": 0
+        },
+        {
+          "complete": false,
+          "currency": "USD",
+          "known_market_value": "216",
+          "missing_price_count": 1
+        }
+      ]
+    },
+    {
+      "account": "demo-account",
+      "as_of": "2026-09-10T11:00:00Z",
+      "broker": "beta",
+      "empty_snapshot": true,
+      "positions": [],
+      "snapshot_id": "beta-2",
+      "valuations": []
+    }
+  ],
+  "contract": "synthetic-holdings/v1",
+  "counts": {
+    "accepted": 4,
+    "rejected": 1,
+    "replay": 1
+  },
+  "events": [
+    {
+      "account": "demo-account",
+      "broker": "alpha",
+      "bytes_read": 502,
+      "canonical_sha256": "8c2bd88b2c3d27d49f7000b713a49c879ee5db3572f55088cff462cc2c149db4",
+      "prefix_sha256": null,
+      "raw_sha256": "7eb7334a5a9afc271b66c7ca99953bdcedf8ddb7b95556465a5c9d8c51ea76cf",
+      "rows_seen": 3,
+      "snapshot_id": "alpha-1",
+      "source": "01-alpha.json",
+      "status": "ACCEPTED",
+      "truncated": false
+    },
+    {
+      "account": "demo-account",
+      "broker": "beta",
+      "bytes_read": 254,
+      "canonical_sha256": "0d858756a19edee7ba244fa76ef08420831050e1d5d3f2707f68533a228d1c00",
+      "prefix_sha256": null,
+      "raw_sha256": "8ce2a4561f71f6e2075f323abe48a1bddf709976ddc4616a2028f0e5cb8e0965",
+      "rows_seen": 1,
+      "snapshot_id": "beta-1",
+      "source": "02-beta.json",
+      "status": "ACCEPTED",
+      "truncated": false
+    },
+    {
+      "account": "demo-account",
+      "broker": "alpha",
+      "bytes_read": 498,
+      "canonical_sha256": "4d9792133f2a41fb753fa6f7fb8fcf380406398640be39e06f756f400e78a460",
+      "prefix_sha256": null,
+      "raw_sha256": "eacc327dc6dc435770640f58e7d9c99c89e80754bb306c0686205c85be4d2cd3",
+      "rows_seen": 3,
+      "snapshot_id": "alpha-2",
+      "source": "03-alpha-update.json",
+      "status": "ACCEPTED",
+      "truncated": false
+    },
+    {
+      "account": "demo-account",
+      "broker": "alpha",
+      "bytes_read": 502,
+      "canonical_sha256": "8c2bd88b2c3d27d49f7000b713a49c879ee5db3572f55088cff462cc2c149db4",
+      "prefix_sha256": null,
+      "raw_sha256": "7eb7334a5a9afc271b66c7ca99953bdcedf8ddb7b95556465a5c9d8c51ea76cf",
+      "rows_seen": 3,
+      "snapshot_id": "alpha-1",
+      "source": "01-alpha.json",
+      "status": "REPLAY",
+      "truncated": false
+    },
+    {
+      "bytes_read": 383,
+      "code": "INVALID_DECIMAL",
+      "path": "$.positions[1].price",
+      "prefix_sha256": null,
+      "raw_sha256": "33b78409a43fc74f440f8c658f47cedd354cb33c8934436d0b342f601d39042c",
+      "rows_seen": 2,
+      "source": "04-alpha-invalid.json",
+      "status": "REJECTED",
+      "truncated": false
+    },
+    {
+      "account": "demo-account",
+      "broker": "beta",
+      "bytes_read": 140,
+      "canonical_sha256": "2b5fcb09d2c240a4d662f4f75aaba7a41a94638d8ca13c95176aca4f0393aa22",
+      "prefix_sha256": null,
+      "raw_sha256": "5aa71868517d7c0afd1873f7e90a519efce5a1568e14ca51f3edcb433fe0724f",
+      "rows_seen": 0,
+      "snapshot_id": "beta-2",
+      "source": "05-beta-clear.json",
+      "status": "ACCEPTED",
+      "truncated": false
+    }
+  ],
+  "input_count": 6,
+  "row_accounting": {
+    "accepted_rows": 7,
+    "active_rows": 3,
+    "recognized_input_rows": 12,
+    "rejected_rows": 2,
+    "replayed_rows": 3,
+    "superseded_rows": 4,
+    "unknown_row_count_inputs": 0
+  },
+  "status": "WARN"
+}

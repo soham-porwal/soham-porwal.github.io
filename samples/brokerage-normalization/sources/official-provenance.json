@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "scope": "Official vendor demonstration evidence; no live account reports. Retrieval date is not sample observation date.",
+  "files": [
+    {
+      "file": "sources/alpaca-position-routes-source.txt",
+      "source_url": "https://raw.githubusercontent.com/alpacahq/alpaca-py/48fd544334a595c53e386043cc9282824b1e9c58/tests/trading/trading_client/test_position_routes.py",
+      "retrieved_at_utc": "2026-09-11T06:03:59.301988+00:00",
+      "sha256": "4f3b7966b8799477991729af4a2ae5cdfa3be047748f5e5c2c7157918d7e2550",
+      "bytes": 15688,
+      "evidence_class": "official SDK test fixture source",
+      "pinned_commit": "48fd544334a595c53e386043cc9282824b1e9c58",
+      "transformation": "none; downloaded bytes unchanged",
+      "provider_declared_sample_dates_note": "The extracted GET positions sample has no observation timestamp. Other order fixtures in this source file include historical 2022 dates; those are not position timestamps.",
+      "repository_commit_date_utc": "2026-09-10T12:15:18Z",
+      "commit_date_meaning": "Repository revision timestamp, not an account observation timestamp."
+    },
+    {
+      "file": "sources/alpaca-LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/alpacahq/alpaca-py/48fd544334a595c53e386043cc9282824b1e9c58/LICENSE",
+      "retrieved_at_utc": "2026-09-11T06:03:59.529425+00:00",
+      "sha256": "bc84da682744c6dd008cf9ad3306caf18444d613a80c1bcc3de0dd46094787ef",
+      "bytes": 10873,
+      "evidence_class": "upstream license",
+      "pinned_commit": "48fd544334a595c53e386043cc9282824b1e9c58",
+      "transformation": "none; downloaded bytes unchanged",
+      "repository_commit_date_utc": "2026-09-10T12:15:18Z",
+      "commit_date_meaning": "Repository revision timestamp, not an account observation timestamp."
+    },
+    {
+      "file": "sources/plaid-sandbox-brokerage-custom-user.json",
+      "source_url": "https://raw.githubusercontent.com/plaid/sandbox-custom-users/92598914b8b259f67efafff2ae80840de0f2b867/investments/brokerage_custom_user.json",
+      "retrieved_at_utc": "2026-09-11T06:03:59.968963+00:00",
+      "sha256": "9ea6832620c390834a95ec637360cad16f17977942baae75421e09ca7b2f31bc",
+      "bytes": 16832,
+      "evidence_class": "upstream sandbox configuration; NOT endpoint response",
+      "pinned_commit": "92598914b8b259f67efafff2ae80840de0f2b867",
+      "transformation": "none; downloaded bytes unchanged",
+      "provider_declared_sample_dates": [
+        {
+          "path": "$.override_accounts[0].holdings[0].institution_price_as_of",
+          "value": "2026-06-23"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[1].institution_price_as_of",
+          "value": "2025-09-22"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[2].institution_price_as_of",
+          "value": "2025-10-27"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[3].institution_price_as_of",
+          "value": "2025-11-12"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[4].institution_price_as_of",
+          "value": "2026-01-02"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[5].institution_price_as_of",
+          "value": "2026-01-29"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[6].institution_price_as_of",
+          "value": "2026-02-11"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[7].institution_price_as_of",
+          "value": "2026-09-11"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[8].institution_price_as_of",
+          "value": "2026-02-21"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[9].institution_price_as_of",
+          "value": "2026-03-10"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[10].institution_price_as_of",
+          "value": "2026-02-09"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[11].institution_price_as_of",
+          "value": "2025-09-15"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[12].institution_price_as_of",
+          "value": "2025-10-17"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[13].institution_price_as_of",
+          "value": "2025-11-27"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[14].institution_price_as_of",
+          "value": "2026-01-05"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[15].institution_price_as_of",
+          "value": "2026-01-17"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[16].institution_price_as_of",
+          "value": "2026-02-26"
+        },
+        {
+          "path": "$.override_accounts[0].holdings[17].institution_price_as_of",
+          "value": "2025-10-11"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[0].date",
+          "value": "2026-06-13"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[1].date",
+          "value": "2026-06-13"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[2].date",
+          "value": "2026-06-27"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[3].date",
+          "value": "2026-02-20"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[4].date",
+          "value": "2026-02-25"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[5].date",
+          "value": "2026-02-22"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[6].date",
+          "value": "2026-02-26"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[7].date",
+          "value": "2026-03-02"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[8].date",
+          "value": "2026-02-12"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[9].date",
+          "value": "2026-02-21"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[10].date",
+          "value": "2026-03-03"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[11].date",
+          "value": "2026-02-24"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[12].date",
+          "value": "2026-03-03"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[13].date",
+          "value": "2026-02-12"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[14].date",
+          "value": "2026-02-21"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[15].date",
+          "value": "2026-03-09"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[16].date",
+          "value": "2026-03-10"
+        },
+        {
+          "path": "$.override_accounts[0].investment_transactions[17].date",
+          "value": "2026-03-11"
+        }
+      ],
+      "currentness": "Contains upstream 2026 and 2025 sandbox dates, preserved unchanged; a custom-user configuration, not an actual endpoint response or verified market report.",
+      "demo_identity": "Contains vendor-supplied test identity John Smith and example contact fields, not user account data.",
+      "repository_commit_date_utc": "2026-09-11T01:02:41Z",
+      "commit_date_meaning": "Repository revision timestamp, not an account observation timestamp."
+    },
+    {
+      "file": "sources/plaid-LICENSE.txt",
+      "source_url": "https://raw.githubusercontent.com/plaid/sandbox-custom-users/92598914b8b259f67efafff2ae80840de0f2b867/LICENSE",
+      "retrieved_at_utc": "2026-09-11T06:04:00.180298+00:00",
+      "sha256": "ec184e832d94a9abab892ab39ed407351c46dc1db9cd4f14ce7ed71828896f96",
+      "bytes": 1062,
+      "evidence_class": "upstream license",
+      "pinned_commit": "92598914b8b259f67efafff2ae80840de0f2b867",
+      "transformation": "none; downloaded bytes unchanged",
+      "repository_commit_date_utc": "2026-09-11T01:02:41Z",
+      "commit_date_meaning": "Repository revision timestamp, not an account observation timestamp."
+    },
+    {
+      "file": "sources/alpaca-sdk-positions-response.json",
+      "source_url": "https://raw.githubusercontent.com/alpacahq/alpaca-py/48fd544334a595c53e386043cc9282824b1e9c58/tests/trading/trading_client/test_position_routes.py",
+      "retrieved_at_utc": "2026-09-11T06:03:59.301988+00:00",
+      "sha256": "a9122b5a419bca1cebaa6d0864e7545d5c0041d03dd9b180719fd46dba91d269",
+      "bytes": 1261,
+      "evidence_class": "official SDK mocked GET /v2/positions response",
+      "pinned_commit": "48fd544334a595c53e386043cc9282824b1e9c58",
+      "derived_from": "sources/alpaca-position-routes-source.txt",
+      "source_locator": "test_get_all_positions text literal, lines 15-47",
+      "transformation": "Extracted sample text only; no value, timestamp, numeric, ID or field edits; no downloaded code executed.",
+      "provider_declared_sample_dates": [],
+      "currentness": "Vendor example, not a live account report; retrieval date does not date the sample.",
+      "repository_commit_date_utc": "2026-09-10T12:15:18Z",
+      "commit_date_meaning": "Repository revision timestamp, not an account observation timestamp."
+    },
+    {
+      "file": "sources/plaid-docs-security.json",
+      "source_url": "https://plaid.com/docs/investments/",
+      "retrieved_at_utc": "2026-09-11T06:03:59.761617+00:00",
+      "sha256": "da36af7c234f142089b193d9b66d0097c62b7dfb77896c8856e040135b358034",
+      "bytes": 739,
+      "evidence_class": "official documentation sample security",
+      "pinned_commit": null,
+      "derived_from": "sources/plaid-investments-docs.html",
+      "source_locator": "HTML pre block 0; Sample security data",
+      "transformation": "Extracted sample text only; no value, timestamp, numeric, ID or field edits; no downloaded code executed.",
+      "provider_declared_sample_dates": [],
+      "currentness": "Vendor example, not a live account report; retrieval date does not date the sample."
+    },
+    {
+      "file": "sources/plaid-docs-holding.json",
+      "source_url": "https://plaid.com/docs/investments/",
+      "retrieved_at_utc": "2026-09-11T06:03:59.761617+00:00",
+      "sha256": "9ab304e2a08040cadd9eadd5238c6f183cc83b5d17a2866e680d5ed772aaf252",
+      "bytes": 910,
+      "evidence_class": "official documentation sample holding",
+      "pinned_commit": null,
+      "derived_from": "sources/plaid-investments-docs.html",
+      "source_locator": "HTML pre block 1; Sample holding data",
+      "transformation": "Extracted sample text only; no value, timestamp, numeric, ID or field edits; no downloaded code executed.",
+      "provider_declared_sample_dates": [
+        {
+          "path": "$.tax_lots[0].original_purchase_datetime",
+          "value": "2021-01-15T00:00:00Z"
+        },
+        {
+          "path": "$.tax_lots[1].original_purchase_datetime",
+          "value": "2021-03-22T00:00:00Z"
+        }
+      ],
+      "currentness": "Vendor example, not a live account report; retrieval date does not date the sample."
+    },
+    {
+      "file": "sources/plaid-docs-transaction.json",
+      "source_url": "https://plaid.com/docs/investments/",
+      "retrieved_at_utc": "2026-09-11T06:03:59.761617+00:00",
+      "sha256": "503e5df156e74ae1da6a8e54f0eb2c343958a1dca0c1dccdea1f04c6ae3802d9",
+      "bytes": 460,
+      "evidence_class": "official documentation sample transaction",
+      "pinned_commit": null,
+      "derived_from": "sources/plaid-investments-docs.html",
+      "source_locator": "HTML pre block 2; Sample transaction data",
+      "transformation": "Extracted sample text only; no value, timestamp, numeric, ID or field edits; no downloaded code executed.",
+      "provider_declared_sample_dates": [
+        {
+          "path": "$.date",
+          "value": "2020-05-29"
+        }
+      ],
+      "currentness": "Vendor example, not a live account report; retrieval date does not date the sample."
+    }
+  ],
+  "findings": {
+    "alpaca_option_position_fixture": "Not present in the fetched test-position routes file; exercise-option tests return empty bodies. No option position payload fabricated.",
+    "plaid_sample_security_holding_join": "The two documentation examples share their security_id. They are separate objects, not a downloaded full endpoint response.",
+    "source_fetch_budget": "Five downloaded source files plus GitHub metadata; extraction used local downloaded text only."
+  }
+}

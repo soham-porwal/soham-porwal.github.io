@@ -1,0 +1,34 @@
+{
+  "account_id": "k67E4xKvMlhmleEa4pg9hlwGGNnnEeixPolGm",
+  "cost_basis": 10,
+  "institution_price": 10.42,
+  "institution_price_as_of": null,
+  "institution_price_datetime": null,
+  "institution_value": 20.84,
+  "iso_currency_code": "USD",
+  "quantity": 2,
+  "vested_quantity": null,
+  "vested_value": null,
+  "security_id": "NDVQrXQoqzt5v3bAe8qRt4A7mK7wvZCLEBBJk",
+  "unofficial_currency_code": null,
+  "tax_lots": [
+    {
+      "institution_lot_id": "1",
+      "original_purchase_datetime": "2021-01-15T00:00:00Z",
+      "quantity": 1,
+      "purchase_price": 4.75,
+      "cost_basis": 4.75,
+      "current_value": 10.42,
+      "position_type": "LONG"
+    },
+    {
+      "institution_lot_id": "2",
+      "original_purchase_datetime": "2021-03-22T00:00:00Z",
+      "quantity": 1,
+      "purchase_price": 5.25,
+      "cost_basis": 5.25,
+      "current_value": 10.42,
+      "position_type": "LONG"
+    }
+  ]
+}

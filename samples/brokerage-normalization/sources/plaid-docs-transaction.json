@@ -1,0 +1,16 @@
+{
+  "account_id": "rz99ex9ZQotvnjXdgQLEsR81e3ArPgulVWjGj",
+  "amount": -8.72,
+  "cancel_transaction_id": null,
+  "date": "2020-05-29",
+  "fees": 0,
+  "investment_transaction_id": "oq99Pz97joHQem4BNjXECev1E4B6L6sRzwANW",
+  "iso_currency_code": "USD",
+  "name": "INCOME DIV DIVIDEND RECEIVED",
+  "price": 0,
+  "quantity": 0,
+  "security_id": "eW4jmnjd6AtjxXVrjmj6SX1dNEdZp3Cy8RnRQ",
+  "subtype": "dividend",
+  "type": "cash",
+  "unofficial_currency_code": null
+}

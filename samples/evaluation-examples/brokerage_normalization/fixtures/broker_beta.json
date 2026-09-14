@@ -1,0 +1,18 @@
+{
+  "provider": "Beacon Demo",
+  "portfolios": [
+    {
+      "id": "beta-zero",
+      "equity_cents": 0,
+      "holdings": [
+        {"ticker": "ACME", "units": "2.5", "mark": "26.00"},
+        {"ticker": "BETA", "units": "3", "mark": "7.25"}
+      ]
+    },
+    {
+      "id": "beta-unknown",
+      "equity_cents": null,
+      "holdings": []
+    }
+  ]
+}

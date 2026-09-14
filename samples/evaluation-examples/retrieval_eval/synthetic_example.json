@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "scope": "invented demonstration; unrelated to the historical experiment",
+  "cases": [
+    {"case": "demo-1", "retrieved": ["item-a", "item-c", "item-b"], "gold": ["item-a", "item-b"]},
+    {"case": "demo-2", "retrieved": ["item-d", "item-e"], "gold": ["item-f"]},
+    {"case": "demo-3", "retrieved": ["item-g"], "gold": []}
+  ]
+}

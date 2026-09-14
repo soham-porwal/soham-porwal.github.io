@@ -1,0 +1,44 @@
+[
+  {
+    "file": "captures/01-alpaca-upstream.json",
+    "sha256": "73907168b3c346521ed51e5f9af4238639feb891cd8288622e97a703afab9676",
+    "class": "assembled_upstream_example",
+    "capture_as_of_is_authored": true
+  },
+  {
+    "file": "captures/02-plaid-upstream.json",
+    "sha256": "a85282d0b7eb6e7bb61e8f13ccc52fce22f1f86defe8a0f8f34d75c954e7a4c3",
+    "class": "assembled_upstream_example",
+    "capture_as_of_is_authored": true
+  },
+  {
+    "file": "captures/03-fidelity-original.json",
+    "sha256": "c6e83c4e2235ec31726dc53b7c78032f27e21017afd3fd5b7aa538ec19ca2ad9",
+    "class": "assembled_upstream_example",
+    "capture_as_of_is_authored": true
+  },
+  {
+    "file": "captures/04-fidelity-derived.json",
+    "sha256": "bac069a13445fe58b8b7b8979435df22f9a5fa3d7bd5e1888b33f555170f7d7f",
+    "class": "derived_external_fixture",
+    "capture_as_of_is_authored": true
+  },
+  {
+    "file": "captures/05-synthetic-short-option.json",
+    "sha256": "147c6c968fbd5c03fa0f3a21d6c5df9c3133847eabc711cbfd0bee4473867546",
+    "class": "synthetic_edge_case",
+    "capture_as_of_is_authored": true
+  },
+  {
+    "file": "captures/06-unknown-quarantine.json",
+    "sha256": "c0c5b37e2b1b6fb7097a75debb6b51eaf0d332a9e2310eabf3cd96328619dbbb",
+    "class": "synthetic_edge_case",
+    "capture_as_of_is_authored": true
+  },
+  {
+    "file": "captures/07-plaid-resolved.json",
+    "sha256": "c53c45561a30e92a7b0133be06aaea62d3545b87eba5fbb14fe65a2f5f3ad227",
+    "class": "synthetic_edge_case",
+    "capture_as_of_is_authored": true
+  }
+]

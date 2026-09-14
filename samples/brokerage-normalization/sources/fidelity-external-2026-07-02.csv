@@ -1,0 +1,8 @@
+﻿Positions for account(s) as of Jul-02-2026
+Account Number,Account Name,Symbol,Description,Quantity,Last Price,Current Value,Cost Basis Total,Type
+Z12345678,Individual Brokerage,VTI,VANGUARD TOTAL STOCK MARKET ETF,420,$305.12,"$128,150.40","$95,000.00",Cash
+Z12345678,Individual Brokerage,SPAXX**,FIDELITY GOVERNMENT MONEY MARKET,5200,$1.00,"$5,200.00",--,Cash
+Z12345678,Individual Brokerage,Pending Activity,,,,"$250.00",,
+X98765432,Employer 401(k),FXAIX,FIDELITY 500 INDEX FUND,850,$211.76,"$179,996.00","$140,000.00",Cash
+
+"The data and information in this spreadsheet is provided to you solely for your use."

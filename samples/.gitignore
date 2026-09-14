@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+checkpoints/
+*.sqlite
+*.sqlite-*
+*.errors.jsonl
+portfolio-examples.zip

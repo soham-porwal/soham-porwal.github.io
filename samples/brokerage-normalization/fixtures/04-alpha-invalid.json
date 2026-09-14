@@ -1,0 +1,8 @@
+{
+  "version": 1, "broker": "alpha", "account": "demo-account", "snapshot_id": "alpha-3",
+  "as_of": "2026-09-10T12:00:00Z",
+  "positions": [
+    {"instrument": "demo-us-1", "symbol": "DUP", "mic": "XNYS", "currency": "USD", "quantity": "900", "price": "30"},
+    {"instrument": "demo-halt", "symbol": "HALT", "mic": "XNAS", "currency": "USD", "quantity": "4", "price": "NaN"}
+  ]
+}
