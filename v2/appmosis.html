@@ -58,12 +58,11 @@
 <div><h2>Outcome</h2><p>The feature reached general availability. My validation investigation traced incorrect portfolio totals to null prices on halted stocks and resolved the issue before release. I also measured initial key connections after launch; the historical active-user cohort count is not available for this case study.</p></div>
 </div>
 <section class="inspect" aria-labelledby="inspect-title">
-<h2 id="inspect-title">Inspect the normalization example</h2>
-<p>This independent example uses invented broker payloads. It demonstrates the transformer pattern and preserves a missing price as unknown; it contains no employer code or data.</p>
-<pre><code>python brokerage_normalization/normalize.py
-python -m unittest discover -s tests -v</code></pre>
-<p>The output distinguishes known market value from completeness. A halted position remains incomplete instead of silently receiving a zero price.</p>
-<p><a class="read" href="work-samples.zip">Download Python examples and tests ↗</a></p></section>
+<h2 id="inspect-title">Inspect the normalization and validation work sample</h2>
+<p>This new, independent, AI-assisted work sample uses public vendor examples and synthetic edge cases. It demonstrates explicit security identity, options-unit handling, reconciliation, and durable replay. It contains no employer code or data.</p>
+<pre><code>python -B checkpoint.py</code></pre>
+<p>Extract the download and run the checkpoint from its folder. Tests cover unknown prices, conflicting identifiers, incomplete captures, and safe retries. Alpaca and Plaid profiles and a Fidelity test CSV dialect are included; this is a bounded offline demonstration, not a live brokerage service. The optional local model proposes mappings during development and cannot write holdings.</p>
+<p><a class="read" href="brokerage-normalization.zip">Download the runnable work sample and tests ↗</a></p></section>
 
 <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">API integration</span><span class="chip repo">Repository being prepared for publication</span></div>
 <div class="actions">
