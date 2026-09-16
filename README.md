@@ -13,7 +13,25 @@ Product and data analysis, brokerage integrations, and AI evaluation. The websit
 
 The brokerage sample uses public vendor examples and synthetic cases. It runs offline and does not connect to customer accounts. The retrieval example recomputes a recorded result from anonymous scores; it does not include the private corpus or rerun the original search. Its package also retains an earlier, small synthetic normalization example.
 
-## Run locally
+## Brokerage upload demo
+
+[Browse the HTTP service and README](demo-api/) · [Verification](demo-api/PROOF.md) · [Deployment requirements](demo-api/DEPLOYMENT.md)
+
+The Appmosis page includes a file-upload interface backed by an isolated Python
+3.12 service. **The public API is unavailable:** no compatible authorized backend
+target is configured. The published page reports that state without returning a
+fabricated portfolio. The source and bundled synthetic examples can be reviewed
+locally; no credentials or live brokerage connections are used.
+
+From this repository's root, with Python 3.12:
+
+```sh
+cd demo-api
+python -B smoke.py
+python -B -m unittest discover -s . -p 'test_*.py' -v
+```
+
+## Offline samples
 
 Python 3.12 or newer. The checks use the standard library; no API keys or model are required.
 
@@ -35,4 +53,4 @@ Each sample has its own README with inputs, expected results, limitations and te
 
 ## Website
 
-The HTML and CSS at the repository root serve the portfolio through GitHub Pages. `/v2/` preserves earlier links to the same reviewed pages. This repository contains only the public website and the selected sample files; private project repositories and employer materials are not included.
+The HTML and CSS at the repository root serve the portfolio through GitHub Pages. `/v2/` preserves earlier links to the same reviewed pages. This repository contains the public website, selected samples and upload-demo source; private project repositories, runtime state and employer materials are not included.

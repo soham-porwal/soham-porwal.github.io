@@ -1,0 +1,27 @@
+{
+  "accounts": [
+    {
+      "account_id": "SYNTHETIC-DEMO"
+    }
+  ],
+  "securities": [
+    {
+      "security_id": "synthetic-plaid-aapl",
+      "ticker_symbol": "AAPL",
+      "type": "equity",
+      "iso_currency_code": "USD"
+    }
+  ],
+  "holdings": [
+    {
+      "account_id": "SYNTHETIC-DEMO",
+      "security_id": "synthetic-plaid-aapl",
+      "quantity": "2",
+      "institution_price": "200",
+      "institution_value": "400",
+      "cost_basis": "300",
+      "iso_currency_code": "USD",
+      "institution_price_datetime": "2026-09-01T20:00:00Z"
+    }
+  ]
+}

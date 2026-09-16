@@ -1,0 +1,46 @@
+[
+  {
+    "file": "alpaca.json",
+    "metadata": {
+      "broker": "alpaca",
+      "account": "SYNTHETIC-DEMO",
+      "as_of": "2026-09-01T20:00:00Z",
+      "currency": "USD",
+      "total_scope": "holdings"
+    },
+    "expected_outcome": "accepted"
+  },
+  {
+    "file": "plaid.json",
+    "metadata": {
+      "broker": "plaid",
+      "account": "SYNTHETIC-DEMO",
+      "as_of": "2026-09-01T20:00:00Z",
+      "currency": "USD",
+      "total_scope": "holdings"
+    },
+    "expected_outcome": "accepted"
+  },
+  {
+    "file": "fidelity.csv",
+    "metadata": {
+      "broker": "fidelity_csv",
+      "account": "SYNTHETIC-DEMO",
+      "as_of": "2026-09-01T20:00:00Z",
+      "currency": "USD",
+      "total_scope": "holdings"
+    },
+    "expected_outcome": "accepted"
+  },
+  {
+    "file": "unknown-identity.json",
+    "metadata": {
+      "broker": "alpaca",
+      "account": "SYNTHETIC-DEMO",
+      "as_of": "2026-09-01T20:00:00Z",
+      "currency": "USD",
+      "total_scope": "holdings"
+    },
+    "expected_outcome": "quarantined"
+  }
+]

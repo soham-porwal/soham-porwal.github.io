@@ -52,6 +52,36 @@
 <div class="metric-card"><strong>6–8 weeks</strong>
 <span>From specification to general availability, in partnership with engineering.</span></div>
 <div class="flow" role="group" aria-label="Data flow"><span>Brokerage APIs</span><b aria-hidden="true">→</b><span>Common data model</span><b aria-hidden="true">→</b><span>Relevant holdings</span><b aria-hidden="true">→</b><span>Grounded answer</span></div>
+<section class="broker-demo" aria-labelledby="broker-demo-title"
+data-api-url="">
+<div class="demo-heading">
+<p class="eyebrow">Live work sample</p>
+<h2 id="broker-demo-title">Normalize a synthetic brokerage export</h2>
+<p>Try the deterministic normalization engine with a bundled synthetic Alpaca, Plaid, or Fidelity-shaped export. Unsupported or ambiguous data is quarantined rather than guessed. This demonstration does not connect to a brokerage account.</p>
+</div>
+<div class="demo-grid">
+<form class="demo-panel demo-input" data-demo-form>
+<h3>Input</h3>
+<div class="demo-samples" aria-label="Bundled synthetic examples"><button type="button" class="demo-sample" data-sample="alpaca">Alpaca example</button><button type="button" class="demo-sample" data-sample="plaid">Plaid example</button><button type="button" class="demo-sample" data-sample="fidelity">Fidelity example</button><button type="button" class="demo-sample" data-sample="quarantine">Quarantine example</button></div>
+<label>Broker profile<select name="broker" required><option value="alpaca">Alpaca JSON</option><option value="plaid">Plaid JSON (strict)</option><option value="fidelity_csv">Fidelity test CSV</option></select></label>
+<label>Account identifier<input name="account" value="SYNTHETIC-DEMO" required autocomplete="off"></label>
+<label>Observation time<input name="as_of" type="datetime-local" value="2026-09-01T20:00" required></label>
+<div class="demo-fields">
+<label>Currency<input name="currency" value="USD" required maxlength="3" autocomplete="off"></label>
+<label>Total scope<select name="total_scope"><option value="holdings">Holdings</option><option value="holdings_plus_cash">Holdings plus cash</option></select></label>
+</div>
+<label class="demo-drop" data-demo-drop>Brokerage export<input name="file" type="file" accept=".json,.csv,application/json,text/csv"><span data-file-label>Drop one CSV or JSON file here, or choose a file</span></label>
+<button class="button" type="submit">Normalize portfolio</button>
+<p class="demo-privacy">The demo accepts one bounded file. Raw input and normalized holdings are removed after each response.</p>
+</form>
+<section class="demo-panel demo-output" aria-live="polite" aria-labelledby="demo-result-title">
+<h3 id="demo-result-title">Normalized portfolio</h3>
+<div class="demo-status" data-demo-status data-state="idle"><strong>Ready for a synthetic example</strong><p>Select a bundled example or upload a supported export.</p></div>
+<div data-demo-result hidden></div>
+</section>
+</div>
+</section>
+<script src="brokerage-demo.js" defer></script>
 <div class="detail">
 <div><h2>Problem</h2><p>Brokerage APIs describe positions differently. Inconsistent inputs could corrupt portfolio reporting and give an AI feature unreliable context.</p></div>
 <div><h2>Decision</h2><p>Normalize each broker’s JSON into a common schema and upsert positions in GCP Spanner by account and symbol. At question time, query only the relevant holdings and format a compact context block. The answer uses portfolio state as of the last sync.</p></div>

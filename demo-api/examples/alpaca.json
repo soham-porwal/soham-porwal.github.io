@@ -1,0 +1,13 @@
+[
+  {
+    "asset_id": "904837e3-3b76-47ec-b432-046db621571b",
+    "symbol": "AAPL",
+    "asset_class": "us_equity",
+    "qty": "2",
+    "side": "long",
+    "market_value": "400",
+    "cost_basis": "300",
+    "current_price": "200",
+    "account_id": "SYNTHETIC-DEMO"
+  }
+]
