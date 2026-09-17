@@ -1,0 +1,197 @@
+{
+  "version": "reviewed-samples-2026-09-v2",
+  "instruments": [
+    {
+      "id": "sample:AAPL",
+      "type": "equity",
+      "currency": "USD",
+      "multiplier": "1",
+      "status": "active"
+    },
+    {
+      "id": "sample:DBLTX",
+      "type": "fund",
+      "currency": "USD",
+      "multiplier": "1",
+      "status": "active"
+    },
+    {
+      "id": "sample:VTI",
+      "type": "fund",
+      "currency": "USD",
+      "multiplier": "1",
+      "status": "active"
+    },
+    {
+      "id": "sample:SPAXX**",
+      "type": "fund",
+      "currency": "USD",
+      "multiplier": "1",
+      "status": "active"
+    },
+    {
+      "id": "sample:FXAIX",
+      "type": "fund",
+      "currency": "USD",
+      "multiplier": "1",
+      "status": "active"
+    },
+    {
+      "id": "synthetic:AAPL-call",
+      "type": "option",
+      "currency": "USD",
+      "multiplier": "100",
+      "status": "active",
+      "underlying_id": "sample:AAPL",
+      "expiry": "2026-12-18",
+      "right": "call",
+      "strike": "200",
+      "deliverable": "standard"
+    },
+    {
+      "id": "synthetic:USD-cash",
+      "type": "cash",
+      "currency": "USD",
+      "multiplier": "1",
+      "status": "active"
+    }
+  ],
+  "aliases": [
+    {
+      "broker": "alpaca",
+      "scheme": "native",
+      "value": "904837e3-3b76-47ec-b432-046db621571b",
+      "instrument_id": "sample:AAPL",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "alpaca",
+      "scheme": "ticker",
+      "value": "AAPL",
+      "instrument_id": "sample:AAPL",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "native",
+      "value": "NDVQrXQoqzt5v3bAe8qRt4A7mK7wvZCLEBBJk",
+      "instrument_id": "sample:DBLTX",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "ticker",
+      "value": "DBLTX",
+      "instrument_id": "sample:DBLTX",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "cusip",
+      "value": "258620103",
+      "instrument_id": "sample:DBLTX",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "isin",
+      "value": "US2586201038",
+      "instrument_id": "sample:DBLTX",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "fidelity_csv",
+      "scheme": "ticker",
+      "value": "VTI",
+      "instrument_id": "sample:VTI",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "fidelity_csv",
+      "scheme": "ticker",
+      "value": "SPAXX**",
+      "instrument_id": "sample:SPAXX**",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "fidelity_csv",
+      "scheme": "ticker",
+      "value": "FXAIX",
+      "instrument_id": "sample:FXAIX",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "alpaca",
+      "scheme": "native",
+      "value": "synthetic-option",
+      "instrument_id": "synthetic:AAPL-call",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "alpaca",
+      "scheme": "ticker",
+      "value": "AAPL261218C00200000",
+      "instrument_id": "synthetic:AAPL-call",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "native",
+      "value": "synthetic-plaid-aapl",
+      "instrument_id": "sample:AAPL",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "ticker",
+      "value": "AAPL",
+      "instrument_id": "sample:AAPL",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "native",
+      "value": "synthetic-plaid-aapl-call",
+      "instrument_id": "synthetic:AAPL-call",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "ticker",
+      "value": "AAPL261218C00200000",
+      "instrument_id": "synthetic:AAPL-call",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "native",
+      "value": "synthetic-plaid-usd-cash",
+      "instrument_id": "synthetic:USD-cash",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    },
+    {
+      "broker": "plaid",
+      "scheme": "ticker",
+      "value": "USD",
+      "instrument_id": "synthetic:USD-cash",
+      "from": "2000-01-01T00:00:00Z",
+      "until": "2100-01-01T00:00:00Z"
+    }
+  ]
+}

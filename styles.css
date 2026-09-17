@@ -229,6 +229,44 @@ hr.rule{border:0;border-top:1px solid var(--line);margin:0}
 .flow span{background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:.35rem .7rem;color:var(--ink-soft)}
 .flow b{color:var(--accent);font-weight:400}
 
+/* ---------- brokerage normalization demo ---------- */
+.broker-demo{margin:2.4rem 0;padding:0}
+.demo-heading{margin-bottom:1.2rem}
+.demo-heading h2{font-size:clamp(1.45rem,3vw,2rem);letter-spacing:-.03em;margin:.35rem 0 .55rem}
+.demo-heading > p:last-child{color:var(--ink-soft);max-width:var(--measure)}
+.demo-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.demo-panel{background:var(--card);padding:1.35rem;min-width:0}
+.demo-panel h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin-bottom:1rem}
+.demo-input{display:grid;gap:.85rem}
+.demo-input label{display:grid;gap:.35rem;color:var(--ink-soft);font-size:.82rem;font-weight:600}
+.demo-input input,.demo-input select{width:100%;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.68rem .72rem;font:inherit}
+.demo-input input:focus,.demo-input select:focus,.demo-drop:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.demo-fields{display:grid;grid-template-columns:.7fr 1.3fr;gap:.75rem}
+.demo-samples{display:flex;flex-wrap:wrap;gap:.45rem}
+.demo-sample{appearance:none;background:var(--wash);color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:.38rem .65rem;font:inherit;font-size:.78rem;cursor:pointer}
+.demo-sample:hover,.demo-sample:focus-visible{border-color:var(--accent);color:var(--accent)}
+.demo-drop{border:1px dashed var(--muted);border-radius:10px;padding:1rem;cursor:pointer;background:var(--wash)}
+.demo-drop.is-dragging{border-color:var(--accent);background:var(--card)}
+.demo-drop input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.demo-drop span{font-weight:400;color:var(--ink-soft);overflow-wrap:anywhere}
+.demo-privacy{font-size:.76rem;color:var(--muted)}
+.demo-output{display:flex;flex-direction:column;gap:1rem}
+.demo-status{border-left:3px solid var(--muted);padding:.75rem .85rem;background:var(--wash)}
+.demo-status[data-state="accepted"]{border-color:#2f9e68}
+.demo-status[data-state="quarantined"]{border-color:#b7791f}
+.demo-status[data-state="failure"]{border-color:#c2413b}
+.demo-status strong{display:block;margin-bottom:.25rem}
+.demo-status p{font-size:.86rem;color:var(--ink-soft)}
+.demo-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin-bottom:1rem}
+.demo-summary div{border:1px solid var(--line);border-radius:8px;padding:.75rem;background:var(--paper)}
+.demo-summary strong{display:block;font-size:1.1rem;color:var(--accent)}
+.demo-summary span{font-size:.75rem;color:var(--muted)}
+.demo-result h4{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin:1rem 0 .45rem}
+.demo-result ul{margin:0;padding-left:1.2rem;color:var(--ink-soft);font-size:.85rem}
+.demo-positions{width:100%;font-size:.8rem}
+.demo-positions th,.demo-positions td{padding:.5rem .35rem;overflow-wrap:anywhere}
+.demo-trace{font-family:var(--mono);font-size:.72rem;color:var(--muted);overflow-wrap:anywhere;margin-top:1rem}
+
 .detail{display:grid;gap:1.6rem;margin:2.2rem 0}
 .detail h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin-bottom:.5rem}
 .detail p{color:var(--ink-soft);max-width:var(--measure);margin:0}
@@ -304,6 +342,7 @@ td{font-variant-numeric:tabular-nums}
   .timeline .tdates{text-align:left}
   .case-meta span::before{content:"";margin:0}
   .case-meta{gap:.2rem 0;flex-direction:column}
+  .demo-grid{grid-template-columns:1fr}
 }
 
 /* Phones: the header is the only row that cannot wrap, so it sets the page
@@ -321,6 +360,8 @@ td{font-variant-numeric:tabular-nums}
   .mark{width:22px;height:22px;flex:0 0 22px;font-size:.65rem}
   .site-head .wrap{gap:.6rem}
   .hero h1{font-size:clamp(1.9rem,8vw,2.4rem)}
+  .demo-fields,.demo-summary{grid-template-columns:1fr}
+  .demo-panel{padding:1rem}
 }
 
 @media (prefers-reduced-motion:reduce){

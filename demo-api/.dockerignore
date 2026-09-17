@@ -1,0 +1,10 @@
+*
+!Dockerfile
+!core.py
+!worker.py
+!service.py
+!engine-manifest.json
+!engine/
+!engine/**
+!examples/
+!examples/**

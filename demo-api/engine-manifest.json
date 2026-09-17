@@ -1,0 +1,8 @@
+{
+  "broker_engine.py": "f0fb864b668767cbf896b0319362ad1aed5e8a15e997cae0e85bafd8ca20d307",
+  "broker_adapters.py": "bcdf51e0cfeb5bf7d874a4b70c370ea666cdc1efa42b327ec83de3de30723187",
+  "durable_store.py": "36fad10155fcb07760afba5ef219660a5fa760ff4cdf9f02604d9776fb28e82c",
+  "broker_cli.py": "968eefe78ac8f0207934fb448573d362f8f0312de3420213e63fafc5eabc7e4d",
+  "raw_intake.py": "52d2c6abf2cf9894579384aeefdffaa6bf51c1df64bdf37e4a7d290e12a7d847",
+  "reference.json": "b3fdf312634542219b75901d3f0c7150cf4e35d5148dc185dad1f6f00867e587"
+}
